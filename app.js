@@ -22,6 +22,73 @@ const basemaps = {
     tiles: ["https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"],
     attribution: "© OpenStreetMap contributors © CARTO",
     maxzoom: 20
+  },
+  dark: {
+    label: "深色底图",
+    tiles: ["https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"],
+    attribution: "© OpenStreetMap contributors © CARTO",
+    maxzoom: 20
+  },
+  streets: {
+    label: "街道地图",
+    tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"],
+    attribution: "© Esri",
+    maxzoom: 20
+  },
+  terrain: {
+    label: "地形影像",
+    tiles: [
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}",
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Reference_Overlay/MapServer/tile/{z}/{y}/{x}"
+    ],
+    attribution: "© Esri",
+    maxzoom: 13
+  },
+  ocean: {
+    label: "海洋地图",
+    tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"],
+    attribution: "© Esri",
+    maxzoom: 10
+  },
+  gaode_vec: {
+    label: "高德矢量",
+    tiles: ["https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}"],
+    attribution: "© 高德地图",
+    maxzoom: 18,
+    subdomains: ["1", "2", "3", "4"]
+  },
+  gaode_img: {
+    label: "高德卫星",
+    tiles: [
+      "https://webst0{s}.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+      "https://webst0{s}.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}"
+    ],
+    attribution: "© 高德地图",
+    maxzoom: 18,
+    subdomains: ["1", "2", "3", "4"]
+  },
+  tencent_vec: {
+    label: "腾讯矢量",
+    tiles: ["https://rt{s}.map.gtimg.com/realtimerender?z={z}&x={x}&y={y}&type=vector&style=1"],
+    attribution: "© 腾讯地图",
+    maxzoom: 18,
+    subdomains: ["0", "1", "2", "3"]
+  },
+  tdt_vec: {
+    label: "天地图矢量",
+    tiles: ["https://t{s}.tianditu.gov.cn/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
+    annotation: ["https://t{s}.tianditu.gov.cn/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
+    attribution: "© 天地图",
+    maxzoom: 18,
+    subdomains: ["0", "1", "2", "3", "4", "5", "6", "7"]
+  },
+  tdt_img: {
+    label: "天地图影像",
+    tiles: ["https://t{s}.tianditu.gov.cn/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
+    annotation: ["https://t{s}.tianditu.gov.cn/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
+    attribution: "© 天地图",
+    maxzoom: 18,
+    subdomains: ["0", "1", "2", "3", "4", "5", "6", "7"]
   }
 };
 
