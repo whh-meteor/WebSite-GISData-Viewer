@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GISData Viewer</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <header class="brand">
+          <div>
+            <h1>GISData Viewer</h1>
+            <p>MapLibre 地球 GIS 数据查看器</p>
+          </div>
+          <button id="toggleSidebar" class="icon-button" type="button" title="收起侧栏" aria-label="收起侧栏">
+            <span aria-hidden="true">‹</span>
+          </button>
+        </header>
+
+        <section class="panel upload-panel">
+          <label class="file-drop" id="dropZone">
+            <input id="fileInput" type="file" multiple accept=".geojson,.json,.zip,.shp,.dbf,.prj,.cpg">
+            <span class="file-drop-title">拖拽 GIS 文件到这里</span>
+            <span class="file-drop-subtitle">GeoJSON、ZIP Shapefile 或 .shp + .dbf</span>
+          </label>
+          <div class="toolbar-row">
+            <label>
+              <span>底图</span>
+              <select id="basemapSelect"></select>
+            </label>
+            <button id="clearAll" class="ghost-button" type="button">清空</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>图层管理</h2>
+            <span id="layerCount">0</span>
+          </div>
+          <div id="layerList" class="layer-list empty-state">暂无图层</div>
+        </section>
+
+        <section class="panel data-panel">
+          <div class="tabs" role="tablist" aria-label="数据查看">
+            <button class="tab-button active" data-tab="structure" type="button">结构</button>
+            <button class="tab-button" data-tab="attributes" type="button">属性表</button>
+          </div>
+          <div class="drawer-content">
+            <pre id="structureView" class="structure-view">加载数据后显示 GeoJSON 结构</pre>
+            <div id="attributesView" class="attributes-view hidden">加载数据后显示属性表</div>
+          </div>
+        </section>
+      </aside>
+
+      <main class="map-stage">
+        <div class="stars" aria-hidden="true"></div>
+        <div id="map"></div>
+        <button id="expandSidebar" class="floating-button" type="button" title="展开侧栏" aria-label="展开侧栏">›</button>
+
+        <div id="status" class="status" role="status"></div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/fflate@0.8.2/umd/index.js"></script>
+    <script src="https://unpkg.com/shpjs@6.2.0/dist/shp.min.js"></script>
+    <script src="https://unpkg.com/shapefile@0.6.6/dist/shapefile.min.js"></script>
+    <script src="app.js?v=20260624-2"></script>
+  </body>
+</html>
