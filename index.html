@@ -3,7 +3,57 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GIS 数据查看器</title>
+    
+    <!-- SEO基础标签 -->
+    <title>GIS数据在线查看器 - 免费GeoJSON/Shapefile地图查看工具 | viewer.cupgis.cn</title>
+    <meta name="description" content="免费在线GIS数据查看器，支持GeoJSON、Shapefile（SHP）、ZIP等格式。无需安装软件，直接在浏览器中查看和分析地理空间数据。适用于GIS从业者、数据分析师和地理信息爱好者。">
+    <meta name="keywords" content="GIS数据查看器,GeoJSON查看器,Shapefile查看器,SHP查看器,在线GIS工具,地理信息系统,地图数据可视化,空间数据分析,GIS在线工具">
+    <meta name="author" content="CUP GIS">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viewer.cupgis.cn/">
+    
+    <!-- Open Graph社交媒体标签 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GIS数据在线查看器 - 免费GeoJSON/Shapefile地图查看工具">
+    <meta property="og:description" content="免费在线查看GeoJSON、Shapefile等GIS数据，支持多种底图切换，无需安装任何软件。">
+    <meta property="og:url" content="https://viewer.cupgis.cn/">
+    <meta property="og:site_name" content="CUP GIS Viewer">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Twitter Card标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GIS数据在线查看器 - 在线查看GeoJSON/SHP数据">
+    <meta name="twitter:description" content="免费的在线GIS数据查看工具，支持拖拽上传，即时预览地理数据。">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GIS数据在线查看器",
+      "alternateName": "Online GIS Data Viewer",
+      "description": "免费在线GIS数据查看器，支持GeoJSON、Shapefile等多种格式，可在浏览器中直接查看和分析地理空间数据。",
+      "url": "https://viewer.cupgis.cn/",
+      "applicationCategory": "GISApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": [
+        "支持GeoJSON格式文件查看",
+        "支持Shapefile (SHP) 格式查看",
+        "支持ZIP压缩的Shapefile",
+        "多图层管理",
+        "属性表查看",
+        "多种底图切换",
+        "响应式设计"
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -12,7 +62,7 @@
       <aside class="sidebar">
         <header class="brand">
           <div>
-            <h1>GIS 数据查看器</h1>
+            <h1>GIS数据在线查看器</h1>
             <p>地球 GIS 数据查看器 shp&geojson</p>
           </div>
           <button id="toggleSidebar" class="icon-button" type="button" title="收起侧栏" aria-label="收起侧栏">

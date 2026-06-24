@@ -1,0 +1,12 @@
+# robots.txt for viewer.cupgis.cn
+# 允许所有搜索引擎爬取
+
+User-agent: *
+Allow: /
+
+# 禁止爬取日志文件
+Disallow: /server.err.log
+Disallow: /server.out.log
+
+# 网站地图位置
+Sitemap: https://viewer.cupgis.cn/sitemap.xml
