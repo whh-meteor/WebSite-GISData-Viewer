@@ -1,4 +1,4 @@
-# GISData Viewer（Online GIS Data Viewer）
+# CupGIS Viewer（Online GIS Data Viewer）
 
 一个基于 MapLibre GL JS 的三维地球 GIS 数据查看器，支持拖拽或选择 GeoJSON、Shapefile 数据，并在侧栏查看数据结构、属性表和图层状态。
 url：https://gis-data-viewer.vercel.app/
