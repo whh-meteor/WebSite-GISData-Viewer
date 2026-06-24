@@ -74,22 +74,7 @@ const basemaps = {
     maxzoom: 18,
     subdomains: ["0", "1", "2", "3"]
   },
-  tdt_vec: {
-    label: "天地图矢量",
-    tiles: ["https://t{s}.tianditu.gov.cn/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
-    annotation: ["https://t{s}.tianditu.gov.cn/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
-    attribution: "© 天地图",
-    maxzoom: 18,
-    subdomains: ["0", "1", "2", "3", "4", "5", "6", "7"]
-  },
-  tdt_img: {
-    label: "天地图影像",
-    tiles: ["https://t{s}.tianditu.gov.cn/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
-    annotation: ["https://t{s}.tianditu.gov.cn/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk=您的天地图key"],
-    attribution: "© 天地图",
-    maxzoom: 18,
-    subdomains: ["0", "1", "2", "3", "4", "5", "6", "7"]
-  }
+
 };
 
 const layerColors = ["#57c7b8", "#f2b84b", "#7aa8ff", "#ff8f70", "#b98cff", "#8fd17f"];
@@ -111,7 +96,7 @@ const statusEl = document.getElementById("status");
 
 const map = new maplibregl.Map({
   container: "map",
-  style: createStyle("topo"),
+  style: createStyle("ocean"),
   center: [105, 34],
   zoom: 2.2,
   pitch: 38,
@@ -190,11 +175,13 @@ document.getElementById("clearAll").addEventListener("click", () => {
 document.getElementById("toggleSidebar").addEventListener("click", () => {
   sidebar.classList.add("collapsed");
   expandSidebar.classList.add("visible");
+  document.querySelector(".app-shell").classList.add("sidebar-collapsed");
 });
 
 expandSidebar.addEventListener("click", () => {
   sidebar.classList.remove("collapsed");
   expandSidebar.classList.remove("visible");
+  document.querySelector(".app-shell").classList.remove("sidebar-collapsed");
 });
 
 document.querySelectorAll(".tab-button").forEach(button => {
