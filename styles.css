@@ -57,6 +57,9 @@ select {
   display: none;
 }
 
+.app-shell.sidebar-collapsed {
+  grid-template-columns: minmax(0, 1fr);
+}
 .brand {
   display: flex;
   align-items: flex-start;
